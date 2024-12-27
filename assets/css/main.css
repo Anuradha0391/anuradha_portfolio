@@ -2983,3 +2983,19 @@ input, select, textarea {
 						}
 
 	}
+/* Contact Details Styling */
+.contact-box p {
+    margin: 2px 0; /* Reduce the vertical spacing */
+    font-size: 16px; /* Keep font readable */
+    line-height: 1.2; /* Adjust line height */
+    color: #fff; /* Ensure visibility */
+}
+
+.contact-box a {
+    color: #fff; /* Keep links visible */
+    text-decoration: none; /* No underline for links */
+}
+
+.contact-box a:hover {
+    text-decoration: underline; /* Optional underline on hover */
+}
