@@ -55,23 +55,26 @@ strategic insights and business growth through data-driven decision-making.
         <!-- Experience Section -->
         <section id="experience" class="wrapper style3">
             <div class="title">Industry Experience</div>
-            <div class="container">
-                <ul>
-                    <li>
-                        <button class="toggle-button">NC State University</button>
-                        <ul class="details" style="display: none; list-style-type: disc; margin-left: 20px;">
-                        <li>Role: Dining Business Assistant.</li>
-                        <li>Managed inventory and streamlined operations for dining services.</li>
-                        <li>Analyzed sales data to improve resource allocation and reduce waste.</li>   
+            <!--<div class="container">-->
+            <div>
+                <div class="experience-item">
+                    <button class="toggle-button">
+                        <span>+</span> North Carolina State University (2023 - Present)
+                    </button>
+                    <div class="details">
+                        <p class="info">Role: Dining Business Assistant</p>
+                        <ul>
+                           <li>Managed inventory and streamlined operations for dining services.</li>
+                           <li>Analyzed sales data to improve resource allocation and reduce waste.</li>   
                     <!--<li><strong>NC State University</strong> – Dining Business Assistant .</li>
                     <li><strong>Strata Clean Energy</strong> – Instrumentation & Control Intern.</li>
                     <li><strong>Accenture</strong> – Business Operations Senior Analyst.</li>
                     <li><strong>Datamatics</strong> – Associate Consultant.</li>
                     <li><strong>HCL Tech</strong> – Software Engineer.</li>-->
                         </ul>
-                    </li>
-                </ul>
-            </div>  
+                    </div>
+                </div>
+            </div>
         </section>
          <!-- Academic Project -->
         <section id="projects" class="wrapper style3">
@@ -122,13 +125,16 @@ strategic insights and business growth through data-driven decision-making.
         document.querySelectorAll('.toggle-button').forEach(button => {
             button.addEventListener('click', () => {
                 const details = button.nextElementSibling;
+                const span = button.querySelector('span');
                 if (details.style.display === "none" || details.style.display === "") {
                     details.style.display = "block";
+                    span.textContent = "-"; // Change + to -
                 } else {
                     details.style.display = "none";
+                    span.textContent = "+"; // Change - back to +
                 }
             });
         });
-    </script>    
+    </script>
 </body>
 </html>
