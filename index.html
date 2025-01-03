@@ -57,15 +57,22 @@ strategic insights and business growth through data-driven decision-making.
             <div class="title">Industry Experience</div>
             <div class="container">
                 <ul>
-                    <li><strong>NC State University</strong> – Dining Business Assistant .</li>
+                    <li>
+                        <button class="toggle-button">NC State University</button>
+                        <ul class="details" style="display: none; list-style-type: disc; margin-left: 20px;">
+                        <li>Role: Dining Business Assistant.</li>
+                        <li>Managed inventory and streamlined operations for dining services.</li>
+                        <li>Analyzed sales data to improve resource allocation and reduce waste.</li>   
+                    <!--<li><strong>NC State University</strong> – Dining Business Assistant .</li>
                     <li><strong>Strata Clean Energy</strong> – Instrumentation & Control Intern.</li>
                     <li><strong>Accenture</strong> – Business Operations Senior Analyst.</li>
                     <li><strong>Datamatics</strong> – Associate Consultant.</li>
-                    <li><strong>HCL Tech</strong> – Software Engineer.</li>
+                    <li><strong>HCL Tech</strong> – Software Engineer.</li>-->
+                        </ul>
+                    </li>
                 </ul>
-            </div>
+            </div>  
         </section>
-
          <!-- Academic Project -->
         <section id="projects" class="wrapper style3">
             <div class="title">Academic Projects</div>
@@ -110,5 +117,18 @@ strategic insights and business growth through data-driven decision-making.
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+        // Toggle functionality for dropdowns
+        document.querySelectorAll('.toggle-button').forEach(button => {
+            button.addEventListener('click', () => {
+                const details = button.nextElementSibling;
+                if (details.style.display === "none" || details.style.display === "") {
+                    details.style.display = "block";
+                } else {
+                    details.style.display = "none";
+                }
+            });
+        });
+    </script>    
 </body>
 </html>
