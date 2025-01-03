@@ -5,6 +5,52 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+        /* Center the experience section */
+        #experience {
+            text-align: center;
+        }
+        .experience-item {
+            margin-bottom: 20px;
+        }
+        .toggle-button {
+            background-color: transparent;
+            color: #007BFF;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+        }
+        .toggle-button span {
+            font-size: 24px;
+            margin-right: 8px;
+        }
+        .toggle-button:hover {
+            color: #0056b3;
+        }
+        .details {
+            margin-top: 10px;
+            display: none;
+            text-align: left;
+            margin-left: auto;
+            margin-right: auto;
+            width: 70%;
+        }
+        .details .info {
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+        .details ul {
+            margin-top: 5px;
+            padding-left: 20px;
+        }
+        .details ul li {
+            list-style-type: disc;
+        }
+    </style>
 </head>
 <body class="homepage is-preload">
     <div id="page-wrapper">
@@ -121,20 +167,21 @@ strategic insights and business growth through data-driven decision-making.
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
     <script>
-        // Toggle functionality for dropdowns
-        document.querySelectorAll('.toggle-button').forEach(button => {
-            button.addEventListener('click', () => {
-                const details = button.nextElementSibling;
-                const span = button.querySelector('span');
-                if (details.style.display === "none" || details.style.display === "") {
-                    details.style.display = "block";
-                    span.textContent = "-"; // Change + to -
-                } else {
-                    details.style.display = "none";
-                    span.textContent = "+"; // Change - back to +
-                }
+            // Toggle functionality for dropdowns
+            document.querySelectorAll('.toggle-button').forEach(button => {
+                button.addEventListener('click', () => {
+                    const details = button.nextElementSibling;
+                    const span = button.querySelector('span');
+                    if (details.style.display === "none" || details.style.display === "") {
+                        details.style.display = "block";
+                        span.textContent = "-"; // Change + to -
+                    } else {
+                        details.style.display = "none";
+                        span.textContent = "+"; // Change - back to +
+                    }
+                });
             });
-        });
-    </script>
+        </script>
+    </div>
 </body>
 </html>
