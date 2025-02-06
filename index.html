@@ -70,14 +70,13 @@
         }
         /* Style for certification images */
         .certification-container {
-            display: flex;
-            justify-content: center;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
             gap: 20px;
-            flex-wrap: nowrap;
+            justify-content: center;
             margin-top: 20px;
         }
         .certification-container a {
-            flex: 1;
             display: flex;
             justify-content: center;
         }
